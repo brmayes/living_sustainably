@@ -1,0 +1,227 @@
+//Fonts
+/* Bold */
+@font-face {
+  font-family: 'Florence';
+  src: url('../assets//fonts/Florence-Regular.eot');
+  /* IE9 Compat Modes */
+  src:/* IE6-IE8 */
+  //  url('../assets//fonts/Florence-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  url('../assets//fonts/Florence-Regular.eot?#iefix') format('embedded-opentype'),url('../assets//fonts/Florence-Regular.woff') format('woff'),url('../assets//fonts/Florence-Regular.ttf') format('truetype'),url('../assets//fonts/Florence-Regular.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+//mixins
+@mixin center {
+  display: block;
+  margin: 0 auto;
+}
+//variables
+$blue: #97c9d1;
+$orange: #e05f3e;
+$grey: #464c4c;
+$beige: #e7e4d0;
+$yellow: #f7b71b;
+$green: #98b454;
+$black: #222222;
+$colors: $grey, $blue, $orange, $beige, $yellow, $green;
+//General
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  background-color: #F5F1E4;
+
+  a {
+    color: $black !important;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.container {
+  background-color: white;
+  height: 100%;
+}
+.posts-container {
+  @include center;
+  width: 70%;
+  min-width: 300px;
+}
+.form-container {
+  margin: 60px 0;
+}
+h1 {
+  font-family: 'Florence', serif;
+  font-size: 48px;
+}
+h2{
+  @extend h1;
+  font-size: 36px;
+}
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.no-posts {
+  text-align: center;
+  margin: 150px 0 175px 0;
+  h1 {
+    font-size: 36px;
+    margin-bottom: 4px;
+  }
+  h3 {
+    font-size: 17px;
+    margin-top: 0px;
+  }
+}
+.logo {
+  @include center;
+  width: 120px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform 1s ease-in-out;
+  &:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#header {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  h1 {
+    text-align: center;
+    font-family: 'Florence', serif;
+    font-size: 48px;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  h3 {
+    margin-top: -9px;
+    text-align: center;
+    margin-left: 134px;
+    font-size: 17px;
+    margin-bottom: 17px;
+  }
+}
+#nav {
+  height: 24px;
+  .nav-links {
+    @include center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 6px;
+      padding-bottom: 2px;
+    }
+    @for $i from 1 through 6 {
+      li:hover:nth-child(#{$i}) {
+        border-bottom: 3px solid nth($colors, $i);
+      }
+    }
+    @for $i from 2 through 6 {
+      li:nth-of-type(#{$i}) {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.post {
+  margin-bottom: 8px;
+
+  h2 {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+}
+.post-thumb {
+  width: 100%;
+}
+.post-info {
+  margin-top: -5px;
+  font-size: 12px;
+  padding-left: 3px;
+}
+.post-teaser {
+  padding-left: 3px;
+}
+
+@mixin cat-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid $grey;
+  padding-right: 6px;
+  margin-left: -20px;
+  margin-bottom: 2px;
+}
+
+.title-arrow-hydro {
+  @include cat-arrow;
+  border-left: 10px solid $blue;
+}
+
+.title-arrow-geothermal {
+  @include cat-arrow;
+  border-left: 10px solid $orange;
+}
+
+.title-arrow-wind {
+  @include cat-arrow;
+  border-left: 10px solid $beige;
+}
+
+.title-arrow-solar {
+  @include cat-arrow;
+  border-left: 10px solid $yellow;
+}
+
+.title-arrow-biomass {
+  @include cat-arrow;
+  border-left: 10px solid $green;
+}
+
+.btn-default {
+  float: right;
+
+  &:hover {
+    background-color: $beige !important;
+  }
+}
+
+.post-edit {
+  @extend .post-info;
+  float: right;
+}
+
+@mixin button {
+  // background-color: #cccccc;
+  padding: 6px 25px;
+  border: none;
+  color: $black;
+  z-index: 1;
+}
+
+.create-button {
+  @include button;
+  background-color: $beige;
+  transition: background-color 0.4s, padding-top 0.4s;
+  position: absolute;
+  &:hover {
+    background-color: $blue;
+    padding-top: 15px;
+  }
+}
+
+hr {
+  border-top: 1px solid #cccccc;
+  width: 10%;
+}

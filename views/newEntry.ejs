@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Living Sustainably</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="top">
+        <div>
+          <a href="/new">
+            <button class="create-button">Create a Post</button>
+          </a>
+        </div>
+      </div>
+      <div id="header">
+        <div class="row">
+          <div class="col-md-12">
+            <img class="logo" src="/assets/ls_logo.png"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Living Sustainably</h1>
+            <h3>How to live an eco-friendly lifestyle</h3>
+          </div>
+        </div>
+
+        <div id="nav">
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="/">All</a>
+              </li>
+              <li>
+                <a href="#">Hydro</a>
+              </li>
+              <li>
+                <a href="#">Geothermal</a>
+              </li>
+              <li>
+                <a href="#">Wind</a>
+              </li>
+              <li>
+                <a href="#">Solar</a>
+              </li>
+              <li>
+                <a href="#">Biomass</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
+      </div>
+
+      <div class="form-container">
+        <form class="form-horizontal" action="/" method="POST">
+
+          <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="entryTitle" name="entryTitle" value=""/>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="author" class="col-sm-2 control-label">Author</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="entryAuthor" name="entryAuthor" value=""/>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-8">
+              <input type="date" class="form-control" id="entryDate" name="entryDate" value=""/>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="entry" class="col-sm-2 control-label">Category</label>
+            <div class="col-sm-8">
+              <select id="entryCategory" name="entryCategory" class="form-control">
+                <option value="hydro">Hydro</option>
+                <option value="geothermal">Geothermal</option>
+                <option value="wind">Wind</option>
+                <option value="solar">Solar</option>
+                <option value="biomass">Biomass</option>
+              </select>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="entry" class="col-sm-2 control-label">Entry</label>
+            <div class="col-sm-8">
+              <textarea type="text" class="form-control" id="entryBody" name="entryBody" rows="6"></textarea>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="thumbnail" class="col-sm-2 control-label">Image URL</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="entryThumbnail" name="entryThumbnail" value=""/>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-2">
+              <button class="btn btn-default">Create</button>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+        </form>
+      </div>
+      <div id="footer">
+        <%# footer goes here %>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
