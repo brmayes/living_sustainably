@@ -21,12 +21,17 @@ app.set('view engine', 'ejs');
 
 //routes
 app.get('/', entries.all); //all (list) page (.get('/location of url', jsFile.module))
+app.get('/category/:category', entries.category); //show categoty
 
 app.get('/new', entries.form); //new action
 app.post('/', entries.create); //new action
 
-// app.post('/:id', entries.update); //edit action
-// app.get('/:id', entries.edit); //edit form
+app.get('/:id', entries.entry); //show
+
+app.post('/:id', entries.update); //edit action
+app.get('/edit/:id', entries.edit); //edit form
+
+app.get('/delete/:id', entries.remove); //delete action
 
 db.connect('mongodb://localhost:27017/test', function(err) {
     console.log("MongoDB connected...");
