@@ -52,6 +52,7 @@ exports.edit = function(req, res) {
     collection.find({"urlID": req.params.id}).limit(1).toArray(function(err, results) {
         res.render('edit', {entry: results[0]});
     });
+
 };
 
 exports.update = function(req, res) {
@@ -79,8 +80,10 @@ exports.update = function(req, res) {
 exports.remove = function(req, res) {
     var collection = db.get().collection('entries');
 
+    console.log(req.params.id);
+
     //note about xss and sanitization
-    collection.removeOne({
+    collection.remove({
         urlID: req.params.id
     });
 

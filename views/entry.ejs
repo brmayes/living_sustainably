@@ -7,8 +7,8 @@
     <title>Living Sustainably</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 header-text">
             <a href="/">
               <h1>Living Sustainably</h1>
               <h3>How to live an eco-friendly lifestyle</h3>
@@ -75,8 +75,8 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="title-arrow-<%= entry.category %>"></div>
-                <h2><a href="/<%= entry.urlID %>"><%= entry.title %></a></h2>
-                <p class="post-info">Posted on <span class="meta"><%= entry.date %></span> by <span class="meta"><%= entry.author %></span> in <span class="meta"><%= entry.category %></span>.</p>
+                <h2><a href="/category/<%= entry.category %>/<%= entry.urlID %>"><%= entry.title %></a></h2>
+                <p class="post-info">Posted on <span class="meta"><%= entry.date %></span> by <span class="meta"><%= entry.author %></span> in <span class="meta"><a href="/category/<%= entry.category %>"><%= entry.category %></a></span>.</p>
               </div>
             </div>
             <div class="row">

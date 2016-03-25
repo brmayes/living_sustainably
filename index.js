@@ -26,7 +26,7 @@ app.get('/category/:category', entries.category); //show categoty
 app.get('/new', entries.form); //new action
 app.post('/', entries.create); //new action
 
-app.get('/:id', entries.entry); //show
+app.get('/category/:category/:id', entries.entry); //show
 
 app.post('/:id', entries.update); //edit action
 app.get('/edit/:id', entries.edit); //edit form

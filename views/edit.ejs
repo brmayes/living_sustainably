@@ -72,7 +72,7 @@
           <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Title</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="entryTitle" name="entryTitle" value="<%= entry.title %>"/>
+              <input type="text" class="form-control" id="entryTitle" name="entryTitle" value="<%= entry.title %>" required/>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -80,7 +80,7 @@
           <div class="form-group">
             <label for="title" class="col-sm-2 control-label" style="margin-bottom: -10px;">URL ID<br /><span style="font-size: 10px;">*No spaces, please!</span></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="entryURL" name="entryURL" value="<%= entry.urlID %>"/>
+              <input type="text" class="form-control" id="entryURL" name="entryURL" value="<%= entry.urlID %>" required/>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -88,7 +88,7 @@
           <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Author</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="entryAuthor" name="entryAuthor" value="<%= entry.author %>"/>
+              <input type="text" class="form-control" id="entryAuthor" name="entryAuthor" value="<%= entry.author %>" required/>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -96,7 +96,7 @@
           <div class="form-group">
             <label for="date" class="col-sm-2 control-label">Date</label>
             <div class="col-sm-8">
-              <input type="date" class="form-control" id="entryDate" name="entryDate" value="<%= entry.date %>"/>
+              <input type="date" class="form-control" id="entryDate" name="entryDate" value="<%= entry.date %>" required/>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -119,7 +119,7 @@
           <div class="form-group">
             <label for="entry" class="col-sm-2 control-label">Entry</label>
             <div class="col-sm-8">
-              <textarea type="text" class="form-control" id="entryBody" name="entryBody" rows="6"><%= entry.body %></textarea>
+              <textarea type="text" class="form-control" id="entryBody" name="entryBody" rows="6" required><%= entry.body %></textarea>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -127,7 +127,7 @@
           <div class="form-group">
             <label for="thumbnail" class="col-sm-2 control-label">Image URL</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="entryThumbnail" name="entryThumbnail" value="<%= entry.thumbnail %>"/>
+              <input type="text" class="form-control" id="entryThumbnail" name="entryThumbnail" value="<%= entry.thumbnail %>" required/>
             </div>
             <div class="col-sm-2"></div>
           </div>
@@ -135,7 +135,7 @@
           <div class="row">
             <div class="col-sm-6"></div>
             <div class="col-sm-4">
-              <a href="/delete/<%= entry.urlID %>"><button class="btn btn-default">Delete</button></a>
+              <a href="/delete/<%= entry.urlID %>" class="btn btn-default">Delete</a>
               <button class="btn btn-default">Update</button>
             </div>
             <div class="col-sm-2"></div>
