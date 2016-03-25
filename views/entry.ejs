@@ -23,7 +23,7 @@
     <div class="container">
       <div id="top">
         <div>
-          <a href="/new"><button class="create-button">Create a Post</button></a>
+          <button class="create-button"><span class="hidden-xs">Create a Post</span><span class="visible-xs">New</span></button>
         </div>
       </div>
       <div id="header">
@@ -76,7 +76,7 @@
               <div class="col-md-12">
                 <div class="title-arrow-<%= entry.category %>"></div>
                 <h2><a href="/category/<%= entry.category %>/<%= entry.urlID %>"><%= entry.title %></a></h2>
-                <p class="post-info">Posted on <span class="meta"><%= entry.date %></span> by <span class="meta"><%= entry.author %></span> in <span class="meta"><a href="/category/<%= entry.category %>"><%= entry.category %></a></span>.</p>
+                <p class="post-info">Posted on <span class="meta"><%= entry.date %></span> by <span class="meta"><%= entry.author %></span> in <span class="meta"><a href="/category/<%= entry.category %>" class="meta-category-<%= entry.category %>"><%= entry.category %></a></span>.</p>
               </div>
             </div>
             <div class="row">
@@ -98,7 +98,43 @@
       </div>
 
       <div id="footer">
-        <%# footer goes here %>
+        <!-- Trigger the modal with a button -->
+        <p class="copyright">
+          Copyright &copy; 2016 Brittany Renee Mayes &bull;
+          <a class="" data-toggle="modal" data-target="#myModal" href="#">More information</a>
+        </p>
+        <%# <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>%>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">More information</h4>
+              </div>
+              <hr/>
+              <div class="modal-body">
+                <p>
+                  This is a simple, custom content management system designed to be used for blogging about eco-friendly lifestyles. The
+                  client can add, edit, update and remove posts. Posts are also organized by category.
+                </p>
+                <p>
+                  Living Sustainably is a server-side client project that uses Node.js and MongoDB. This project also uses EJS as a templating system, and Sass for styling.
+                </p>
+                <p>
+                  The logo, found on
+                  <a href="https://dribbble.com/shots/777142-Logo-Concept">Dribbble.com</a>,was created by Jeremiah Shaw.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

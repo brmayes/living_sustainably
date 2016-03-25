@@ -12,6 +12,7 @@
   display: block;
   margin: 0 auto;
 }
+
 //variables
 $blue: #97c9d1;
 $orange: #e05f3e;
@@ -21,6 +22,8 @@ $yellow: #f7b71b;
 $green: #98b454;
 $black: #222222;
 $colors: $grey, $blue, $orange, $beige, $yellow, $green;
+
+
 //General
 body {
   font-family: 'Questrial', sans-serif;
@@ -58,8 +61,12 @@ body {
 h1 {
   font-family: 'Fine Style', serif;
   font-size: 48px;
-  // font-variant: small-caps;
+
+  @media screen and (max-width: 426px) {
+    // font-size: 36px !important;
+  }
 }
+
 h2{
   @extend h1;
   font-size: 30px;
@@ -126,6 +133,11 @@ h3 {
       display: inline-block;
       margin-right: 6px;
       padding-bottom: 2px;
+
+      @media screen and (max-width: 426px) {
+        margin-right: -10px !important;
+      }
+
     }
     @for $i from 1 through 6 {
       li:hover:nth-child(#{$i}) {
@@ -263,10 +275,20 @@ hr {
 }
 
 #footer {
+  h4 {
+    font-family: "fine style", sans-serif;
+    font-size: 30px;
+  }
+
+  hr {
+
+  }
   margin-bottom: 55px;
 
   .modal-header, .modal-footer {
     border: 0;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .modal-title {

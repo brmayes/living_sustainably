@@ -129,6 +129,12 @@ h3 {
   padding-bottom: 2px;
 }
 
+@media screen and (max-width: 426px) {
+  #nav ul li {
+    margin-right: -10px !important;
+  }
+}
+
 #nav ul li:hover:nth-child(1) {
   border-bottom: 3px solid #464c4c;
 }
@@ -325,8 +331,15 @@ hr {
   margin-bottom: 55px;
 }
 
+#footer h4 {
+  font-family: "fine style", sans-serif;
+  font-size: 30px;
+}
+
 #footer .modal-header, #footer .modal-footer {
   border: 0;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 #footer .modal-title {
